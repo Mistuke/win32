@@ -5,7 +5,6 @@ clone_depth: 5
 skip_branch_with_pr: true
 
 platform:
-  - x86_64
   - x86
 
 environment:
@@ -61,3 +60,7 @@ before_build:
 build_script:
  - echo packages:. > cabal.project
  - cabal %CABOPTS% new-build -j all
+ 
+on_finish:
+  - ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
+
