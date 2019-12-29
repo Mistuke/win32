@@ -33,6 +33,7 @@ Library
     build-tool-depends: hsc2hs:hsc2hs > 0 && < 0.68.6 || > 0.68.6
     ghc-options:    -Wall -fno-warn-name-shadowing
     cc-options:     -fno-strict-aliasing
+    hsc2hs-options: -k -v
     exposed-modules:
         Graphics.Win32.GDI
         Graphics.Win32.GDI.Bitmap
