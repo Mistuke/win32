@@ -9,7 +9,7 @@ platform:
 
 environment:
   global:
-    CABOPTS:  --http-transport=plain-http
+    CABOPTS:  --http-transport=plain-http -v3
     CHOCOCMD: ghc --version %GHCVER%
   matrix:
     - GHCVER: 8.6.2
